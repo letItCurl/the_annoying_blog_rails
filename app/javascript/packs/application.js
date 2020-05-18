@@ -16,14 +16,23 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+import "bootstrap"
+
 import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
-import App from '../app.vue'
+import Navbar from '../components/navbar.vue'
 
 Vue.use(TurbolinksAdapter)
 
-Vue.component('app', App)
+Vue.component('navbar', Navbar)
 
 document.addEventListener('turbolinks:load', () => {
-  const app = new Vue({el: '[data-behavior=vue]'})
+  const app = new Vue({el: '[data-behavior=vue]'});
+  //$('.dropdown-toggle').dropdown();
+  const options = {
+    trigger: 'focus',
+    delay: {"hide": 100 }
+  }
+  $('[data-toggle="tooltip"]').tooltip(options);
+  $('[data-toggle="popover"]').popover(options);
 })
