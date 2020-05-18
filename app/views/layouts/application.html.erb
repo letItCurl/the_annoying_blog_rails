@@ -4,25 +4,20 @@
     <title>TheAnnoyingBlog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body >
     <div data-behavior="vue">
-      <navbar></navbar>
+      <navbar 
+      :root="<%= root_path.to_json %>"
+      :links="[{'path': <%= about_path.to_json %>, 'title': 'About me'}]"
+      :drop-down-links="[<%= root_path.to_json %>, <%= about_path.to_json %>]"
+      :separated-drop-down-links="[<%= root_path.to_json %>, <%= about_path.to_json %>]">
+      </navbar>
       <%= yield %>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div>
+      <%= link_to 'home', root_path %>
     </div>
   </body>
 </html>
