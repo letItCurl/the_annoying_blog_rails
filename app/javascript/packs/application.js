@@ -36,7 +36,3 @@ document.addEventListener('turbolinks:load', () => {
   $('[data-toggle="tooltip"]').tooltip(options);
   $('[data-toggle="popover"]').popover(options);
 })
-
-document.addEventListener('DOMContentLoaded', () => {
-  
-})
