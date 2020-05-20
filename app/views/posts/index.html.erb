@@ -14,10 +14,10 @@
 
   <tbody>
     <% @posts.each do |post| %>
-      <tr>
+      <tr id="post_<%=post.id%>">
         <td><%= post.author_user_id %></td>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
+        <td id="post_title_<%=post.id%>"><%= post.title %></td>
+        <td id="post_body_<%=post.id%>"><%= post.body %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
