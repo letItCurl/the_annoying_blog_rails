@@ -1,12 +1,7 @@
 Turbolinks.visit("/posts")
 
-setTimeout(function() { 
+window.addEventListener("DOMContentLoaded", (event) => {
+    console.log(event)
     document.getElementById('post_title_<%= @post.id %>').innerText = "<%= @post.title %>"
     document.getElementById('post_body_<%= @post.id %>').innerText = "<%= @post.body %>"
-}, 50);
-
-//document.addEventListener("turbolinks:load", function() {
-//    document.getElementById('post_title_<%= @post.id %>').innerText = "<%= @post.title %>"
-//    document.getElementById('post_body_<%= @post.id %>').innerText = "<%= @post.body %>"
-//})
-
+  });
