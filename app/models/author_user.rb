@@ -1,0 +1,3 @@
+class AuthorUser < User
+
+end
