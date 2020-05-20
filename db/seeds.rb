@@ -14,6 +14,8 @@ puts "CREATING author user ..."
 author = AuthorUser.create!( email: "author@mail.com", password:"123456789", password_confirmation:"123456789")
 puts "CREATED author user"
 
-puts "CREATING author user ..."
-
-puts "CREATED author user"
+puts "CREATING 20 author user posts ..."
+20.times do
+    author.posts.create!(title: "hello", body: "world")
+end
+puts "CREATED 20 author user posts"

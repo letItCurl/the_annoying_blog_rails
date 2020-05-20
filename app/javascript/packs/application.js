@@ -20,11 +20,11 @@ import "bootstrap"
 
 import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
-import Navbar from '../components/navbar.vue'
+//import Navbar from '../components/navbar.vue'
 
 Vue.use(TurbolinksAdapter)
 
-Vue.component('navbar', Navbar)
+//Vue.component('navbar', Navbar)
 
 document.addEventListener('turbolinks:load', () => {
   const app = new Vue({el: '[data-behavior=vue]'});
