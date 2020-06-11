@@ -3,6 +3,8 @@
 
 ***UJS DONE***
 
+***Tubrbolinks DONE***
+
 # About me
 
 <table style="border: none;">
