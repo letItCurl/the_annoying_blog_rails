@@ -1,5 +1,5 @@
 # The anoying blog [![](https://img.shields.io/badge/autor-letItCurl-red.svg)](https://www.linkedin.com/in/roland-lopez-developer/?locale=en_US)
->Let's push the limits of rails with another anoying blog project
+>Let's push the limits of rails with another anoying blog project 😩
 
 # About me
 
